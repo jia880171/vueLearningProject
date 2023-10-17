@@ -1,0 +1,17 @@
+version: '3'
+services:
+  vue-container:
+    container_name: vue
+    # specify the directory of the Dockerfile
+    build: vue-app 
+    volumes:
+      - ./vue-app:/app
+    ports:
+      - "8080:8080"
+    tty: true
+
+
+    # You might use this when you want to run an interactive shell inside a container, 
+    # debug a running container, or enter a container to investigate issues or run specific commands interactively.
+    # Keep in mind that tty: true is typically used for debugging and development purposes. 
+    # In most production scenarios, you won't need to enable a TTY because production containers often run in the background as daemons without an interactive shell.
