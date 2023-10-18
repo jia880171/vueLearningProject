@@ -3,9 +3,9 @@ services:
   vue-container:
     container_name: vue
     # specify the directory of the Dockerfile
-    build: vue-app 
+    build: vue-container 
     volumes:
-      - ./vue-app:/app
+      - ./vue-container:/app
     ports:
       - "8080:8080"
     tty: true
@@ -16,9 +16,9 @@ services:
 
   laravel-container:
     container_name: laravel
-    build: laravel-app
+    build: laravel-container
     volumes:
-      - ./laravel-app:/app
+      - ./laravel-container:/app
     ports:
-      - "9000:9000"
+      - "8000:8000"
     tty: true

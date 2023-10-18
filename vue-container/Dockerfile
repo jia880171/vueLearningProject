@@ -21,8 +21,9 @@ RUN npm install
 EXPOSE 8080
 
 # This is typically used during the image building process.
-# When you use RUN, it executes the command during the image build stage. It is used to perform actions when creating the Docker image.
-# RUN npm run serve
+# When you use RUN, it executes the command during the image build stage. 
+# It is used to perform actions when creating the Docker image.
+# => RUN npm run serve
 
 # This is used to specify the default command to run when a container is started.
 # Start the Vue development server
