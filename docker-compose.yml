@@ -22,3 +22,14 @@ services:
     ports:
       - "8000:8000"
     tty: true
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: Unick
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: nick
+      MYSQL_PASSWORD: nick
+    ports:
+      - "3306:3306"

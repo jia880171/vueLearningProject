@@ -26,20 +26,20 @@ export default {
   props: {
     id: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
+      required: true,
     },
     phoneNumber: {
       type: String,
-      required: true
+      required: true,
     },
     emailAddress: {},
     favorite: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   // The emits is used to document the component
   // emits: ['toggle-favorite']
@@ -51,18 +51,18 @@ export default {
         console.warn("missing ID");
         return false;
       }
-    }
+    },
   },
   data() {
     return {
       detailsAreVisible: false,
-      isfavorite: this.favorite // This only init the vaule.To keep isfavorite in sync you need to use a watcher.
+      isfavorite: this.favorite, // This only init the vaule.To keep isfavorite in sync you need to use a watcher.
     };
   },
   watch: {
     favorite(value) {
       this.isfavorite = value;
-    }
+    },
   },
   methods: {
     toggleDetails() {
@@ -77,8 +77,8 @@ export default {
 
     deleteFriend() {
       this.$emit("delete-friend", this.id);
-    }
-  }
+    },
+  },
 };
 </script>
 

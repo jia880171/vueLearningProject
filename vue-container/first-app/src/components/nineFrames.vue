@@ -1,7 +1,11 @@
 <template>
   <section>
     <div class="img-row">
-      <div class="img-container" v-for="(picSrc, index) in picSrcs" :key="index">
+      <div
+        class="img-container"
+        v-for="(picSrc, index) in picSrcs"
+        :key="index"
+      >
         <img :src="require(`@/assets/${picSrc}`)" />
       </div>
     </div>
@@ -21,14 +25,14 @@ export default {
         "1.jpeg",
         "2.jpeg",
         "3.jpeg",
-        "1.jpeg"
+        "1.jpeg",
         // "6.jpeg",
         // "7.jpeg",
         // "8.jpeg",
         // "9.jpeg"
-      ]
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -39,7 +43,7 @@ export default {
   flex-wrap: wrap;
 }
 
-.img-container{
+.img-container {
   /* border: 1; */
   /* border-color: red; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);

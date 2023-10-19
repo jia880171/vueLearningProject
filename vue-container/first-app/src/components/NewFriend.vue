@@ -6,7 +6,7 @@
     </div>
     <div>
       <label>Phone</label>
-      <input type="tel"  v-model="enteredPhone"/>
+      <input type="tel" v-model="enteredPhone" />
     </div>
     <div>
       <label>E-Mail</label>
@@ -19,23 +19,23 @@
 </template>
 <script>
 export default {
-  emits: ['add-contact'],
+  emits: ["add-contact"],
   data() {
     return {
       enteredName: "",
       enteredPhone: "",
-      enteredEmail: ""
+      enteredEmail: "",
     };
   },
   methods: {
     submitData() {
       this.$emit(
-        'add-contact',
+        "add-contact",
         this.enteredName,
         this.enteredPhone,
         this.enteredEmail
-      )
-    }
-  }
+      );
+    },
+  },
 };
 </script>

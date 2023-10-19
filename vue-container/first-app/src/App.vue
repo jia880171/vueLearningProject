@@ -36,16 +36,16 @@ export default {
           name: "Manuel Lorenz",
           phone: "0123 45678 90",
           email: "manuel@localhost.com",
-          favorite: false
+          favorite: false,
         },
         {
           id: "julie",
           name: "Julie Jones",
           phone: "0987 654421 21",
           email: "julie@localhost.com",
-          favorite: false
-        }
-      ]
+          favorite: false,
+        },
+      ],
     };
   },
   methods: {
@@ -72,7 +72,7 @@ export default {
         name,
         phone,
         email,
-        favorite: false
+        favorite: false,
       };
       this.friends.push(newFriendContact);
     },
@@ -83,8 +83,8 @@ export default {
       if (friendIndex !== -1) {
         this.friends.splice(friendIndex, 1);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
